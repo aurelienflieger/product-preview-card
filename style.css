@@ -1,0 +1,34 @@
+:root {
+    /* Colors */
+    --darkcyan:  hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --verydarkblue: hsl(212, 21%, 14%);
+    --darkgrayblue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    /* Fonts */
+    --font-default: 'Montsierrat', sans-serif;
+    --font-secondary: 'Fraunces', sans-serif;
+    --font-default: 0.875rem;
+    --spacing-xs: 0.5rem;
+    /* Spacing */
+    --spacing-s: 1rem;
+    --spacing-m: 1.5rem;
+    --spacing-l: 2rem;
+    --spacing-xl: 3rem;
+    /* Miscellaneous */
+    --border-radius: 20px;
+}
+
+@font-face {
+    font-family: 'Montsierrat';
+    src: url(./fonts/Montserrat.ttf) format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url(./fonts/Fraunces.ttf) format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
