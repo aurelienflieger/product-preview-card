@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Product preview card component</title>
   </head>
   <body>
     <article class="product-card">
       <header class="product-card__header">
-        <picture class="product-card__picture">
+        <picture class="product-card__picture-container">
           <source
             srcset="./images/image-product-mobile.avif"
             type="image/avif"
@@ -34,7 +34,7 @@
             type="image/webp"
             media="(min-width: 601px)"
           />
-          <img src="./images/image-product-desktop.jpg" alt="Product preview" />
+          <img class="product-card__picture" src="./images/image-product-desktop.jpg" alt="Product preview" />
         </picture>
       </header>
       <main class="product-card__body">

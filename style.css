@@ -16,7 +16,7 @@
     --spacing-l: 2rem;
     --spacing-xl: 3rem;
     /* Miscellaneous */
-    --border-radius: 20px;
+    --rounded-borders: 20px;
 }
 
 @font-face {
@@ -32,3 +32,38 @@
     font-weight: 100 900;
     font-style: normal;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+}
+
+.product-card {
+    border-radius: var(--rounded-borders);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    margin-inline: var(--spacing-s);
+    margin-block: var(--spacing-m);
+}
+
+.product-card__header {
+    display: flex;
+    width: 100%;
+}
+
+.product-card__picture {
+    max-width: 100%;
+    border-radius: var(--rounded-borders) var(--rounded-borders) 0 0;
+}
+
