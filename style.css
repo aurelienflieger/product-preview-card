@@ -1,69 +1,152 @@
 :root {
-    /* Colors */
-    --darkcyan:  hsl(158, 36%, 37%);
-    --cream: hsl(30, 38%, 92%);
-    --verydarkblue: hsl(212, 21%, 14%);
-    --darkgrayblue: hsl(228, 12%, 48%);
-    --white: hsl(0, 0%, 100%);
-    /* Fonts */
-    --font-default: 'Montsierrat', sans-serif;
-    --font-secondary: 'Fraunces', sans-serif;
-    --font-default: 0.875rem;
-    --spacing-xs: 0.5rem;
-    /* Spacing */
-    --spacing-s: 1rem;
-    --spacing-m: 1.5rem;
-    --spacing-l: 2rem;
-    --spacing-xl: 3rem;
-    /* Miscellaneous */
-    --rounded-borders: 20px;
+  /* Colors */
+  --darkcyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --verydarkblue: hsl(212, 21%, 14%);
+  --darkgrayblue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-primary: "Montsierrat", sans-serif;
+  --font-secondary: "Fraunces", sans-serif;
+  --font-s: 0.875rem;
+  --font-m: 1rem;
+  --font-l: 1.125rem;
+  --font-xl: 1.5rem;
+  --font-xxl: 2rem;
+  --spacing-xs: 0.5rem;
+  /* Spacing */
+  --spacing-s: 1rem;
+  --spacing-m: 1.5rem;
+  --spacing-l: 2rem;
+  --spacing-xl: 3rem;
+  /* Miscellaneous */
+  --rounded-borders: 20px;
+  --soft-borders: 10px;
 }
 
 @font-face {
-    font-family: 'Montsierrat';
-    src: url(./fonts/Montserrat.ttf) format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
+  font-family: "Montsierrat";
+  src: url(./fonts/Montserrat.ttf) format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Fraunces';
-    src: url(./fonts/Fraunces.ttf) format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
+  font-family: "Fraunces";
+  src: url(./fonts/Fraunces.ttf) format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    width: 100dvw;
-    height: 100dvh;
-    background-color: var(--cream);
-    display: flex;
-    justify-content: center;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
 }
 
 .product-card {
-    border-radius: var(--rounded-borders);
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
-    width: 100%;
-    margin-inline: var(--spacing-s);
-    margin-block: var(--spacing-m);
+  border-radius: var(--rounded-borders);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-inline: var(--spacing-s);
+  margin-block: var(--spacing-m);
+  background-color: var(--white);
+  height: fit-content;
 }
 
 .product-card__header {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .product-card__picture {
-    max-width: 100%;
-    border-radius: var(--rounded-borders) var(--rounded-borders) 0 0;
+  max-width: 100%;
+  border-radius: var(--rounded-borders) var(--rounded-borders) 0 0;
 }
 
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-xs);
+  padding-inline: var(--spacing-s);
+  padding-block: var(--spacing-m);
+}
+
+.product-card__category {
+  font-family: var(--font-primary);
+  font-size: var(--font-s);
+  color: var(--darkgrayblue);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.product-card__title {
+  font-family: var(--font-secondary);
+  font-size: var(--font-xxl);
+  color: var(--verydarkblue);
+  line-height: 1;
+}
+
+.product-card__description {
+  font-family: var(--font-primary);
+  font-size: var(--font-s);
+  color: var(--darkgrayblue);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.product-card__current-price {
+  font-family: var(--font-secondary);
+  color: var(--darkcyan);
+  font-weight: 800;
+  font-size: var(--font-xxl);
+}
+
+.product-card__price-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+}
+
+.product-card__past-price {
+  color: var(--darkgrayblue);
+  font-family: var(--font-primary);
+  font-size: var(--font-s);
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.product-card__button {
+  padding: var(--spacing-s);
+  background-color: var(--darkcyan);
+  color: var(--white);
+  font-family: var(--font-primary);
+  border-radius: var(--soft-borders);
+  font-weight: 800;
+  font-size: var(--font-m);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.product-card__button::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-image: url(./images/icon-cart.svg);
+  background-repeat: no-repeat;
+}
